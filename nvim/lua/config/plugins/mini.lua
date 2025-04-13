@@ -20,6 +20,10 @@ return {
 			vim.keymap.set('n', '<leader>e', function()
 				require('mini.files').open()
 			end, { desc = 'Open file explorer (mini.files)' })
+
+			local pairs = require 'mini.pairs'
+			pairs.setup {}
+
 		end
 	},
 }
