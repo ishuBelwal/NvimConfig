@@ -35,3 +35,11 @@ vim.keymap.set("n", "<space>st", function()
 	vim.cmd.wincmd("J")
 	vim.api.nvim_win_set_height(0, 8)
 end)
+
+vim.api.nvim_create_autocmd('VimEnter', {
+	callback = function()
+		if vim.fn.isdirectory(vim.fn.argv()[1]) == 1 then
+			require('mini.files').open(vim.fn.argv()[1])
+		end
+	end
+})
