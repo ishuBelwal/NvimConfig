@@ -43,3 +43,9 @@ vim.api.nvim_create_autocmd('VimEnter', {
 		end
 	end
 })
+
+vim.keymap.set('n', '<leader><tab>', '<C-^>', { desc = 'Switch to previous buffer' })
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = 'Delete current buffer' })
+vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set("n", "<space>fh", require('telescope.builtin').help_tags)
+vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = 'Previous buffer' })

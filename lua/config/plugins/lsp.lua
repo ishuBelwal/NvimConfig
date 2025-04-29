@@ -53,6 +53,8 @@ return {
 			require("lspconfig").clangd.setup {
 				capabilities = capabilities,
 			}
+
+			require("lspconfig").gopls.setup {}
 		end,
 	}
 }
